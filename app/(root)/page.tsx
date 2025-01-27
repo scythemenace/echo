@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button";
+import AudiobookCard from "@/components/AudiobookCard";
+import { audiobookData } from "@/constants";
 import React from "react";
 
 const Home = () => {
@@ -6,7 +7,15 @@ const Home = () => {
     <div className="mt-9 flex-col gap-9">
       <section className="flex flex-col gap-5">
         <h1 className="text-20 font-bold text-white-1">Trending Audiobooks</h1>
-        <Button className="text-white-1 bg-violet-1">Button</Button>
+        {audiobookData.map(({ id, title, description, imgURL }) => (
+          <AudiobookCard
+            key={id}
+            title={title}
+            description={description}
+            imgUrl={imgURL}
+            audiobookId={id}
+          />
+        ))}
       </section>
     </div>
   );

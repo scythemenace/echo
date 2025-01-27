@@ -1,4 +1,5 @@
 import LeftSidebar from "@/components/LeftSidebar";
+import MobileNav from "@/components/MobileNav";
 import RightSidebar from "@/components/RightSidebar";
 import Image from "next/image";
 
@@ -20,10 +21,12 @@ export default function RootLayout({
                 height={30}
                 alt="menu icon"
               />
-              MobileNav
+              <MobileNav />
             </div>
-            Toaster (notification popups)
-            {children}
+            <div className="flex flex-col md:pb-14">
+              Toaster
+              {children}
+            </div>
           </div>
         </section>
         <RightSidebar />
