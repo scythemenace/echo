@@ -43,7 +43,7 @@ export const voiceDetails = [
   },
 ];
 
-export const podcastData = [
+export const audiobookData = [
   {
     id: 1,
     title: "The Joe Rogan Experience",
